@@ -158,8 +158,10 @@
     color: #ffffff;
     text-align: center;
     transition: all 0.2s ease; */
+  background-color: #ffffff;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .app-badge img {
   width: 120px;
@@ -167,16 +169,18 @@
   display: block;
   margin: 8px auto;
   object-fit: contain;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* .app-badge:hover {
-    background-color: #f0f0f0;
-    border-color: #cccccc;
-    
-} */
+.app-badge img:hover {
+  transform: scale(1.1);
+}
 
 /* Copyright Section */
 .copyright-section {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -184,6 +188,13 @@
   border-top: 1px solid #e0e0e0;
   padding: 15px 60px;
   background-color: #eff2f4;
+}
+
+.copyright-section img {
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  right: 128px;
 }
 
 .copyright-section p {
