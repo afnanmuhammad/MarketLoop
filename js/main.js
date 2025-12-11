@@ -11,3 +11,12 @@ fetch("/components/footer.html")
     .then(data => {
         document.getElementById("footer").innerHTML = data;
     });
+
+
+    // allCategory pages
+
+    fetch("/pages/allCategory.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("allCategory").innerHTML = data;
+    });
