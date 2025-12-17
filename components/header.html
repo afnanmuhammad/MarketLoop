@@ -28,18 +28,21 @@
 
     <!-- Icons -->
     <div class="icons-container">
-      <button class="icon">
+      <a href="/pages/profile.html" class="icon" id="nav-profile-link"
+        style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; border: none; background: none; cursor: pointer;">
         <img src="../assets/icons/user.png" alt="profile" />
         <span>Profile</span>
-      </button>
-      <button class="icon">
+      </a>
+      <a href="/pages/messages.html" class="icon"
+        style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; border: none; background: none; cursor: pointer;">
         <img src="../assets/icons/Message-icon.png" alt="message" />
         <span>Message</span>
-      </button>
-      <button class="icon">
+      </a>
+      <a href="/pages/orders.html" class="icon"
+        style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; border: none; background: none; cursor: pointer;">
         <img src="../assets/icons/order-icon.png" alt="order" />
         <span>Orders</span>
-      </button>
+      </a>
       <a href="/pages/cart.html" class="icon"
         style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; border: none; background: none; cursor: pointer;">
         <img src="../assets/icons/cart.png" alt="cart" /> <span>My Cart</span>
@@ -56,11 +59,11 @@
       </button>
 
       <ul class="nav-links">
-        <li><a href="#">All Categories</a></li>
-        <li><a href="#">Hot offers</a></li>
-        <li><a href="#">Gift boxes</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Menu item</a></li>
+        <li><a href="/pages/product-list.html">All Categories</a></li>
+        <li><a href="/pages/product-list.html">Hot offers</a></li>
+        <li><a href="/pages/cart.html">Gift boxes</a></li>
+        <li><a href="/pages/product-detail.html">Projects</a></li>
+        <li><a href="/index.html">Menu item</a></li>
       </ul>
 
       <div class="dropdown-container">
@@ -79,36 +82,35 @@
     </nav>
 
     <!-- RIGHT SIDE (Language + Country) -->
-    <!-- <div class="nav-right">
-      <select class="language">
-        <option value="english">English</option>
-        <option value="spanish">Spanish</option>
-        <option value="french">French</option>
-      </select> -->
-
-    <!-- <select class="country-flag">
-        <option value="us">🇺🇸 USA <img src="../assets/Image/flags/AE@2x.png" alt=""/></option>
-        <option value="uk">🇬🇧 UK</option>
-        <option value="fr">🇫🇷 FR</option>
-      </select> -->
-
-    <!-- payment  -->
-    <div class="dropdown-container">
-      <div class="">
-        <button class="payment">
+    <div class="nav-right">
+      <!-- Language Dropdown -->
+      <div class="custom-dropdown" id="lang-dropdown">
+        <button class="dropdown-toggle">
           English, USD
-          <span><img src="../assets/Image/control/Vector.png" alt="" /></span>
+          <img src="../assets/Image/control/Vector.png" alt="arrow" class="arrow-icon" />
         </button>
+        <ul class="dropdown-menu">
+          <li>English, USD</li>
+          <li>German, EUR</li>
+          <li>French, EUR</li>
+        </ul>
       </div>
 
-      <!-- select flage and  countary -->
-      <div class="flage-container">
-        <button class="select-countary">
-          China<img src="../assets/Image/flags/CN@2x.png" class="flage-img" />
+      <!-- Country Dropdown -->
+      <div class="custom-dropdown" id="country-dropdown">
+        <button class="dropdown-toggle">
+          China
+          <img src="../assets/Image/flags/CN@2x.png" alt="CN" class="flag-icon" />
+          <img src="../assets/Image/control/Vector.png" alt="arrow" class="arrow-icon" />
         </button>
-        <button class="dropdown-btn">
-          <img src="../assets/Image/control/Vector.png " alt="" />
-        </button>
+        <ul class="dropdown-menu">
+          <li data-flag="../assets/Image/flags/CN@2x.png">China <img src="../assets/Image/flags/CN@2x.png" alt="CN"
+              class="flag-icon" /></li>
+          <li data-flag="../assets/Image/flags/DE@2x.png">Germany <img src="../assets/Image/flags/DE@2x.png" alt="DE"
+              class="flag-icon" /></li>
+          <li data-flag="../assets/Image/flags/US@2x.png">USA <img src="../assets/Image/flags/US@2x.png" alt="US"
+              class="flag-icon" /></li>
+        </ul>
       </div>
     </div>
   </div>

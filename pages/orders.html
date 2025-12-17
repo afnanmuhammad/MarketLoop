@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - E-Shop</title>
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="../css/orders.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="orders-container">
+        <h1>My Orders</h1>
+
+        <div class="orders-table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="order-history-body">
+                    <tr>
+                        <td style="font-weight: 600;">#ORD-2023-001</td>
+                        <td style="color: #606060;">Oct 24, 2023</td>
+                        <td style="font-weight: 500;">$1,200.00</td>
+                        <td><span class="status status-delivered">Delivered</span></td>
+                        <td><a href="#" class="action-btn">View Order</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 600;">#ORD-2023-045</td>
+                        <td style="color: #606060;">Nov 10, 2023</td>
+                        <td style="font-weight: 500;">$450.50</td>
+                        <td><span class="status status-shipped">Shipped</span></td>
+                        <td><a href="#" class="action-btn">Track Order</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 600;">#ORD-2023-089</td>
+                        <td style="color: #606060;">Dec 01, 2023</td>
+                        <td style="font-weight: 500;">$89.99</td>
+                        <td><span class="status status-processing">Processing</span></td>
+                        <td><a href="#" class="action-btn">Manage</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 600;">#ORD-2023-112</td>
+                        <td style="color: #606060;">Dec 15, 2023</td>
+                        <td style="font-weight: 500;">$2,340.00</td>
+                        <td><span class="status status-processing">Processing</span></td>
+                        <td><a href="#" class="action-btn">Manage</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

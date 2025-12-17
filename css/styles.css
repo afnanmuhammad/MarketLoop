@@ -130,6 +130,7 @@
 
 /* JOIN Button */
 .join-btn {
+  align-items: center;
   width: 100%;
   height: 30px;
   text-align: center;
@@ -140,28 +141,29 @@
     rgba(0, 103, 255, 1) 100%
   );
   color: white;
-  padding: 8px;
+  /* padding: 8px; */
   border-radius: 6px;
   font-weight: 500;
 
   /* FIXED SMALL GAP */
-  margin: 4px 0;
+  margin: 10px 0;
 }
 
 /* LOGIN Button */
 .Login-btn {
+  align-items: center;
   width: 100%;
   height: 30px;
   text-align: center;
   border: none;
   background: #ffffff;
   color: #0d6efd;
-  padding: 8px;
+  /* padding: 8px; */
   border-radius: 6px;
   font-weight: 500;
 
   /* FIXED SMALL GAP */
-  margin: 4px 0;
+  margin: 2px 0;
 }
 
 /* ========================== TEXT DIVS ========================== */

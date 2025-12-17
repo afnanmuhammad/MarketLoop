@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Brand</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="auth-header">
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <span class="icon"><i class="fa-solid fa-bag-shopping"></i></span>
+                <span class="text">Brand</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-card" style="max-width: 450px;">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-row" style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label>Name</label>
+                        <input type="text" placeholder="Type here" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Surname</label>
+                        <input type="text" placeholder="Type here" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="At least 6 characters" required>
+                        <i class="fa-regular fa-eye toggle-password"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Repeat Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Type here" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-btn">Register</button>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+                            alt="Facebook">
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <p class="auth-footer">
+                    Already have an account? <a href="login.html">Log in</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="auth-footer-bar">
+        <div class="container">
+            <div class="copyright">© 2023 Ecommerce.</div>
+            <div class="links">
+                <a href="#">Support</a>
+                <a href="#">Privacy & Cookies</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Mock Registration
+            localStorage.setItem('user', JSON.stringify({ name: 'Muhammad Afnan', email: 'muhammadafnan@example.com' }));
+            alert("Registration successful!");
+            window.location.href = '/index.html';
+        });
+    </script>
+</body>
+
+</html>

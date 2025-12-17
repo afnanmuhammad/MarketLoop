@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - E-Shop</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+      .profile-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+      }
+
+      .profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: #666;
+      }
+      .profile-avatar img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .profile-info h2 {
+        margin: 0 0 10px 0;
+      }
+
+      .profile-details .row {
+        display: flex;
+        margin-bottom: 15px;
+      }
+
+      .profile-details .label {
+        font-weight: bold;
+        width: 150px;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <img src="../assets/icons/account-icon.png" alt="" />
+        </div>
+        <div class="profile-info">
+          <h2 id="profile-name">Muhammad Afnan</h2>
+          <p>Member since 2023</p>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <h3>Personal Information</h3>
+        <div class="row">
+          <span class="label">Email:</span>
+          <span id="profile-email">muhammadafnan@example.com</span>
+        </div>
+        <div class="row">
+          <span class="label">Phone:</span>
+          <span>+1 234 567 8900</span>
+        </div>
+        <div class="row">
+          <span class="label">Address:</span>
+          <span>123 Market St, San Francisco, CA 94105</span>
+        </div>
+        <div class="row">
+          <span class="label">Account Type:</span>
+          <span>Premium Buyer</span>
+        </div>
+
+        <div
+          class="actions-row"
+          style="display: flex; gap: 20px; margin-top: 30px"
+        >
+          <button class="join-btn" style="padding: 5px 30px">
+            Edit Profile
+          </button>
+          <button
+            id="logout-btn"
+            class="join-btn"
+            style="
+              padding: 5px 30px;
+              background-color: #fa3434;
+              border-color: #fa3434;
+            "
+          >
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (!user) {
+          // Not logged in, redirect to login
+          window.location.href = "login.html";
+          return;
+        }
+
+        // Populate Data
+        if (user.name)
+          document.getElementById("profile-name").innerText = user.name;
+        if (user.email)
+          document.getElementById("profile-email").innerText = user.email;
+
+        // Logout Logic
+        document.getElementById("logout-btn").addEventListener("click", () => {
+          localStorage.removeItem("user");
+          alert("Logged out successfully");
+          window.location.href = "../index.html";
+        });
+      });
+    </script>
+  </body>
+</html>

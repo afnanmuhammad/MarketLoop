@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - E-Shop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/invoice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main class="invoice-container">
+        <header class="invoice-header">
+            <div class="invoice-logo">
+                <img src="../assets/Image/logo-symbol.png" alt="Logo" style="width: 40px;">
+                <span style="font-size: 24px; font-weight: 700; color: #8cb7f5; margin-left: 10px;">Brand</span>
+            </div>
+            <div class="invoice-title">
+                <h2>Invoice</h2>
+                <p class="invoice-subtitle">Thank you for your purchase</p>
+            </div>
+        </header>
+
+        <section class="invoice-details">
+            <div class="detail-group">
+                <h4>Invoice To:</h4>
+                <p id="inv-customer-name">Loading...</p>
+                <p style="font-weight: 400; color: #505050;">1234 Commerce St, City, Country</p>
+            </div>
+            <div class="detail-group" style="text-align: right;">
+                <h4>ID: <span id="inv-idx" style="color: #1c1c1c;">#0000</span></h4>
+                <p id="inv-date">Date: ...</p>
+            </div>
+        </section>
+
+        <table class="invoice-items">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th style="text-align: right;">Total</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-items-body">
+                <!-- Items injected here -->
+            </tbody>
+        </table>
+
+        <section class="invoice-summary">
+            <div class="summary-box">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="inv-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="inv-tax">$14.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount:</span>
+                    <span id="inv-discount" style="color: #fa3434;">- $60.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="inv-total">$0.00</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="invoice-actions">
+            <button class="btn-print" onclick="window.print()"><i class="fa-solid fa-print"></i> Print</button>
+            <button class="btn-continue" onclick="window.location.href='/index.html'">Continue Shopping</button>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
