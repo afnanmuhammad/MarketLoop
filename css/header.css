@@ -38,6 +38,7 @@ body {
   height: 40.17px;
   margin-top: 1.91px;
 }
+
 .logo span {
   width: 77px;
   height: 21.1pxpx;
@@ -87,6 +88,7 @@ body {
   cursor: pointer;
   margin-right: 10px;
 }
+
 .category-potion {
   font-size: 16px;
   width: 130px;
@@ -271,114 +273,83 @@ body {
 }
 
 .dropdown-btn:hover img {
-  filter: brightness(0) saturate(100%) invert(28%) sepia(95%) saturate(7498%)
-    hue-rotate(209deg) brightness(95%) contrast(95%);
+  filter: brightness(0) saturate(100%) invert(28%) sepia(95%) saturate(7498%) hue-rotate(209deg) brightness(95%) contrast(95%);
 }
 
-/* ========== COUNTRY & PAYMENT DROPDOWN ========== */
-.dropdown-container {
+/* ========== RIGHT SIDE DROPDOWNS ========== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.custom-dropdown {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
-/* General button styling */
-.dropdown-container button {
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: none;
   border: none;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
   cursor: pointer;
-  gap: 6px;
-  font-size: 14px;
-  align-items: center;
+  padding: 5px;
 }
 
-/* Arrow icon inside button */
-.dropdown-container button img {
-  align-items: center;
-  width: 12px;
-  height: 12px;
-  border: none;
-  padding: 1px;
-  object-fit: contain;
-}
-
-/* Optional: Dropdown menu (hidden by default) */
-.dropdown-container .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background-color: #fff;
-
-  min-width: 150px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  padding: 8px 0;
-}
-
-/* Dropdown items */
-.dropdown-container .dropdown-menu button {
-  width: 100%;
-  padding: 6px 12px;
-  border: none;
-  background: none;
-  text-align: left;
-}
-
-.dropdown-container .dropdown-menu button:hover {
-  background-color: #f2f2f2;
-}
-
-/* ========== SELECT COUNTRY BUTTON (NO BORDER) ========== */
-
-.flage-container {
-  display: flex;
-  align-items: center;
-
-  border: none;
-
-  padding: 6px 0px;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
-}
-.select-countary {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  border: none;
-
-  padding: 6px 12px;
-  font-size: 14px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.select-countary span {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-/* Flag image */
-.flage-img {
-  width: 22px !important;
-  height: 16px !important;
+.flag-icon {
+  width: 22px;
+  height: 16px;
   object-fit: cover;
-  /* border-radius: 2px;  */
 }
 
-/* Down arrow */
-.select-countary span img:last-child {
-  width: 12px;
-  height: 12px;
+.arrow-icon {
+  width: 10px;
+  height: 6px;
   object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.custom-dropdown.active .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1000;
+  padding: 5px 0;
+  list-style: none;
+}
+
+.custom-dropdown.active .dropdown-menu {
+  display: block;
+  /* Show when active */
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1c1c1c;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f7fafc;
+  color: #0d6efd;
 }

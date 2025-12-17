@@ -2,596 +2,372 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List - E-Shop</title>
-    <!-- Base Styles -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Page Specific Styles -->
-    <link rel="stylesheet" href="../css/product-list.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product List - E-Shop</title>
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Page Specific Styles -->
+  <link rel="stylesheet" href="../css/product-list.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
+  <!-- Header -->
+  <div id="header"></div>
 
-    <!-- Header -->
-    <div id="header"></div>
+  <!-- Main Content -->
+  <main class="main-container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+      <a href="/index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <a href="product-list.html">Clothings</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <a href="product-list.html">Men's wear</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span class="current">Summer clothing</span>
+    </nav>
 
-    <!-- Main Content -->
-    <main class="main-container">
-
-        <!-- Breadcrumbs -->
-        <nav class="breadcrumbs">
-            <a href="/">Home</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="#">Clothings</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="#">Men's wear</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <span class="current">Summer clothing</span>
-        </nav>
-
-        <div class="content-wrapper">
-            <!-- Sidebar Filters -->
-            <aside class="sidebar">
-
-                <!-- Category Filter -->
-                <div class="filter-group">
-                    <div class="filter-header">
-                        <h3>Category</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                    <ul class="filter-list">
-                        <li><a href="#">Mobile accessory</a></li>
-                        <li><a href="#">Electronics</a></li>
-                        <li><a href="#">Smartphones</a></li>
-                        <li><a href="#">Modern tech</a></li>
-                        <li><a href="#" class="see-all">See all</a></li>
-                    </ul>
-                </div>
-
-                <div class="filter-divider"></div>
-
-                <!-- Brands Filter -->
-                <div class="filter-group">
-                    <div class="filter-header">
-                        <h3>Brands</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                    <ul class="checkbox-list">
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                Samsung
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                Apple
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Huawei
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                Pocco
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Lenovo
-                            </label>
-                        </li>
-                        <li><a href="#" class="see-all">See all</a></li>
-                    </ul>
-                </div>
-
-                <div class="filter-divider"></div>
-
-                <!-- Features Filter -->
-                <div class="filter-group">
-                    <div class="filter-header">
-                        <h3>Features</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                    <ul class="checkbox-list">
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                Metallic
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Plastic cover
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                8GB Ram
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Super power
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Large Memory
-                            </label>
-                        </li>
-                        <li><a href="#" class="see-all">See all</a></li>
-                    </ul>
-                </div>
-
-                <div class="filter-divider"></div>
-
-                <!-- Price Range -->
-                <div class="filter-group">
-                    <div class="filter-header">
-                        <h3>Price range</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                    <!-- Simple Range Slider Visual -->
-                    <div class="range-slider-container">
-                        <input type="range" class="range-slider" min="0" max="10000" value="500">
-                    </div>
-                    <div class="price-inputs">
-                        <div class="input-wrap">
-                            <label>Min</label>
-                            <input type="number" placeholder="0">
-                        </div>
-                        <div class="input-wrap">
-                            <label>Max</label>
-                            <input type="number" placeholder="999999">
-                        </div>
-                    </div>
-                    <button class="apply-btn">Apply</button>
-                </div>
-
-                <div class="filter-divider"></div>
-
-                <!-- Condition -->
-                <div class="filter-group">
-                    <div class="filter-header">
-                        <h3>Condition</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                    <ul class="radio-list">
-                        <li>
-                            <label class="custom-radio">
-                                <input type="radio" name="condition" checked>
-                                <span class="radio-mark"></span>
-                                Any
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-radio">
-                                <input type="radio" name="condition">
-                                <span class="radio-mark"></span>
-                                Refurbished
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-radio">
-                                <input type="radio" name="condition">
-                                <span class="radio-mark"></span>
-                                Brand new
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-radio">
-                                <input type="radio" name="condition">
-                                <span class="radio-mark"></span>
-                                Old items
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="filter-divider"></div>
-
-                <!-- Ratings -->
-                <div class="filter-group">
-                    <div class="filter-header">
-                        <h3>Ratings</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
-                    </div>
-                    <ul class="checkbox-list">
-                        <li>
-                            <label class="custom-checkbox rating-checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox rating-checkbox">
-                                <input type="checkbox" checked>
-                                <span class="checkmark"></span>
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox rating-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="custom-checkbox rating-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-
-            </aside>
-
-            <!-- Product Feed -->
-            <section class="product-feed">
-                <!-- Toolbar -->
-                <div class="toolbar">
-                    <div class="item-count">12,911 items in <strong>Mobile accessory</strong></div>
-                    <div class="toolbar-actions">
-                        <label class="verified-check">
-                            <input type="checkbox">
-                            Verified only
-                        </label>
-                        <select class="sort-select">
-                            <option>Featured</option>
-                            <option>Price: Low to High</option>
-                        </select>
-                        <div class="view-switcher">
-                            <button class="active"><i class="fa-solid fa-windows"></i></button>
-                            <button><i class="fa-solid fa-list"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Active Filters -->
-                <div class="active-filters">
-                    <div class="filter-chip">Samsung <i class="fa-solid fa-xmark"></i></div>
-                    <div class="filter-chip">Apple <i class="fa-solid fa-xmark"></i></div>
-                    <div class="filter-chip">Poco <i class="fa-solid fa-xmark"></i></div>
-                    <div class="filter-chip">Metallic <i class="fa-solid fa-xmark"></i></div>
-                    <div class="filter-chip">4 star <i class="fa-solid fa-xmark"></i></div>
-                    <div class="filter-chip">3 star <i class="fa-solid fa-xmark"></i></div>
-                    <a href="#" class="clear-all">Clear all filter</a>
-                </div>
-
-                <!-- Product List -->
-                <div class="product-list-container grid-3-col">
-
-                    <!-- Product Card 1 -->
-                    <article class="product-card" onclick="window.location.href='product-detail.html'"
-                        style="cursor: pointer;">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/image 29.png" alt="Iphone Red">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                    <span class="old-price">$1128.00</span>
-                                </div>
-                                <button class="wishlist-btn" onclick="event.stopPropagation()"><i
-                                        class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 2 -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/6.png" alt="Iphone Blue">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                    <span class="old-price">$1128.00</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                </span>
-                                <span class="rating-score">5.9</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 3 -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/8.png" alt="Xiaomi">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 4 -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/image 34.png" alt="Tablet">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                    <span class="old-price">$1128.00</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 5 -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/6.png" alt="Canon">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                    <span class="old-price">$1128.00</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 6 -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/image 29.png" alt="Phone">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 7 (Laptop from design) -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/image 34.png" alt="Laptop">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                    <span class="old-price">$1128.00</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 8 (Watch) -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/image 23.png" alt="Watch">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                    <span class="old-price">$1128.00</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                    <!-- Product Card 9 (Red Phone) -->
-                    <article class="product-card">
-                        <div class="img-wrapper">
-                            <img src="../assets/Image/tech/6.png" alt="Phone">
-                        </div>
-                        <div class="product-info-block">
-                            <div class="price-row">
-                                <div>
-                                    <span class="current-price">$99.50</span>
-                                </div>
-                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="rating-row">
-                                <span class="stars">
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star filled"></i>
-                                    <i class="fa-solid fa-star-half-stroke filled"></i>
-                                </span>
-                                <span class="rating-score">7.5</span>
-                            </div>
-                            <h3 class="product-title">GoPro HERO6 4K Action Camera - Black</h3>
-                        </div>
-                    </article>
-
-                </div>
-
-                <!-- Pagination -->
-                <div class="pagination">
-                    <select class="per-page">
-                        <option>Show 10</option>
-                        <option>Show 20</option>
-                    </select>
-                    <div class="page-controls">
-                        <button class="page-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="page-btn active">1</button>
-                        <button class="page-btn">2</button>
-                        <button class="page-btn">3</button>
-                        <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-                </div>
-
-            </section>
+    <div class="content-wrapper">
+      <!-- Sidebar Filters -->
+      <aside class="sidebar">
+        <!-- Category Filter -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Category</h3>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <ul class="filter-list">
+            <li><a href="#">Mobile accessory</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Modern tech</a></li>
+            <li><a href="#" class="see-all">See all</a></li>
+          </ul>
         </div>
 
-        <!-- Subscribe Newsletter -->
-        <div class="newsletter-section">
-            <h2>Subscribe on our newsletter</h2>
-            <p>Get daily news on upcoming offers from many suppliers all over the world</p>
-            <div class="newsletter-input-group">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
+        <div class="filter-divider"></div>
+
+        <!-- Brands Filter -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Brands</h3>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <ul class="checkbox-list">
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" checked />
+                <span class="checkmark"></span>
+                Samsung
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" checked />
+                <span class="checkmark"></span>
+                Apple
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Huawei
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" checked />
+                <span class="checkmark"></span>
+                Pocco
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Lenovo
+              </label>
+            </li>
+            <li><a href="#" class="see-all">See all</a></li>
+          </ul>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <!-- Features Filter -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Features</h3>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <ul class="checkbox-list">
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" checked />
+                <span class="checkmark"></span>
+                Metallic
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Plastic cover
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                8GB Ram
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Super power
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Large Memory
+              </label>
+            </li>
+            <li><a href="#" class="see-all">See all</a></li>
+          </ul>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <!-- Price Range -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Price range</h3>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <!-- Simple Range Slider Visual -->
+          <div class="range-slider-container">
+            <input type="range" class="range-slider" min="0" max="10000" value="500" />
+          </div>
+          <div class="price-inputs">
+            <div class="input-wrap">
+              <label>Min</label>
+              <input type="number" placeholder="0" />
             </div>
+            <div class="input-wrap">
+              <label>Max</label>
+              <input type="number" placeholder="999999" />
+            </div>
+          </div>
+          <button class="apply-btn">Apply</button>
         </div>
 
-    </main>
+        <div class="filter-divider"></div>
 
-    <!-- Footer -->
-    <div id="footer"></div>
+        <!-- Condition -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Condition</h3>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <ul class="radio-list">
+            <li>
+              <label class="custom-radio">
+                <input type="radio" name="condition" checked />
+                <span class="radio-mark"></span>
+                Any
+              </label>
+            </li>
+            <li>
+              <label class="custom-radio">
+                <input type="radio" name="condition" />
+                <span class="radio-mark"></span>
+                Refurbished
+              </label>
+            </li>
+            <li>
+              <label class="custom-radio">
+                <input type="radio" name="condition" />
+                <span class="radio-mark"></span>
+                Brand new
+              </label>
+            </li>
+            <li>
+              <label class="custom-radio">
+                <input type="radio" name="condition" />
+                <span class="radio-mark"></span>
+                Old items
+              </label>
+            </li>
+          </ul>
+        </div>
 
-    <script src="../js/main.js"></script>
+        <div class="filter-divider"></div>
+
+        <!-- Ratings -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <h3>Ratings</h3>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <ul class="checkbox-list">
+            <li>
+              <label class="custom-checkbox rating-checkbox">
+                <input type="checkbox" checked />
+                <span class="checkmark"></span>
+                <span class="stars">
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox rating-checkbox">
+                <input type="checkbox" checked />
+                <span class="checkmark"></span>
+                <span class="stars">
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox rating-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                <span class="stars">
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="custom-checkbox rating-checkbox">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                <span class="stars">
+                  <i class="fa-solid fa-star filled"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Product Feed -->
+      <section class="product-feed">
+        <!-- Toolbar -->
+        <div class="toolbar">
+          <div class="item-count">
+            12,911 items in <strong>Mobile accessory</strong>
+          </div>
+          <div class="toolbar-actions">
+            <label class="verified-check">
+              <input type="checkbox" />
+              Verified only
+            </label>
+            <select class="sort-select">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+            </select>
+            <div class="view-switcher">
+              <button class="active">
+                <!-- <i class="fa-solid fa-windows"></i> -->
+                <img src="../assets/icons/grid-button.png" alt="" />
+              </button>
+              <button><i class="fa-solid fa-list"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filters -->
+        <div class="active-filters">
+          <div class="filter-chip">
+            Samsung <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="filter-chip">
+            Apple <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="filter-chip">
+            Poco <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="filter-chip">
+            Metallic <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="filter-chip">
+            4 star <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="filter-chip">
+            3 star <i class="fa-solid fa-xmark"></i>
+          </div>
+          <a href="#" class="clear-all">Clear all filter</a>
+        </div>
+
+        <!-- Product List - Content will be rendered dynamically by main.js -->
+        <div class="product-list-container grid-3-col">
+          <!-- Dynamic Items -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <select class="per-page">
+            <option>Show 10</option>
+            <option>Show 20</option>
+          </select>
+          <div class="page-controls">
+            <button class="page-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Subscribe Newsletter -->
+    <div class="newsletter-section">
+      <h2>Subscribe on our newsletter</h2>
+      <p>
+        Get daily news on upcoming offers from many suppliers all over the
+        world
+      </p>
+      <div class="newsletter-input-group">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" placeholder="Email" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

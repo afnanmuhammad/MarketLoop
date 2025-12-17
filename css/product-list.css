@@ -353,13 +353,18 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  /* Stack vertically for grid view */
   background: white;
-  border: 1px solid #e3e8ee;
+  border: 1px solid #e0e0e0;
+  /* Subtle border */
   border-radius: 6px;
+  /* Slightly rounded corners */
   padding: 15px;
   gap: 10px;
-  /* IMPORTANT: No blue border requested by user */
+  transition: box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .img-wrapper {
@@ -368,7 +373,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  position: relative;
 }
 
 .img-wrapper img {
@@ -380,13 +386,18 @@
 .product-info-block {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
+  border-top: 1px solid #eee;
+  /* Separator like in design if needed, checking img... actually no separator in card body usually */
+  border-top: none;
+  padding-top: 5px;
 }
 
 .price-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  /* Align top to handle different heights */
   margin-bottom: 5px;
 }
 
@@ -394,32 +405,41 @@
   font-size: 18px;
   font-weight: 600;
   color: #1c1c1c;
-  margin-right: 8px;
+  display: block;
+  line-height: 1.2;
 }
 
 .old-price {
   font-size: 13px;
   color: #8b96a5;
   text-decoration: line-through;
+  display: block;
+  margin-top: 2px;
 }
 
 .wishlist-btn {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border: 1px solid #dee2e7;
   border-radius: 6px;
   background: white;
   color: #0d6efd;
+  /* Blue heart icon */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s;
+}
+
+.wishlist-btn:hover {
+  background-color: #f0f0f0;
 }
 
 .rating-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 5px;
 }
 
@@ -430,12 +450,11 @@
 }
 
 .product-title {
-  font-size: 14px;
-  color: #606060;
+  font-size: 15px;
+  color: #505050;
   font-weight: 400;
   margin: 0;
-  /* Restrict to 2 lines if needed */
-  line-height: 1.4;
+  line-height: 22px;
 }
 
 /* Pagination */
@@ -666,6 +685,12 @@
 /* Show view details in List View */
 .product-list-container.list-view .view-details {
   display: inline-block;
+}
+
+/* Fix Price/Icon spacing in List View */
+.product-list-container.list-view .price-row {
+  justify-content: flex-start !important;
+  gap: 500px; /* Add significant space but keep them grouped left-ish or just separate them correctly */
 }
 
 /* Also ensure Rating/Shipping row is handled correctly in Grid vs List */

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - E-Shop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .msg-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .msg-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .msg-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .msg-item:hover {
+            background: #f9f9f9;
+        }
+
+        .sender-avatar {
+            width: 50px;
+            height: 50px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .msg-content {
+            flex: 1;
+        }
+
+        .sender-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .msg-preview {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .msg-time {
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        h1 {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="msg-container">
+        <h1>Messages</h1>
+        <ul class="msg-list">
+            <li class="msg-item">
+                <div class="sender-avatar"></div>
+                <div class="msg-content">
+                    <span class="sender-name">Tech Supplier Co.</span>
+                    <span class="msg-preview">Your order #12345 has been shipped! Track it here...</span>
+                </div>
+                <span class="msg-time">2 mins ago</span>
+            </li>
+            <li class="msg-item">
+                <div class="sender-avatar"></div>
+                <div class="msg-content">
+                    <span class="sender-name">Global Electronics</span>
+                    <span class="msg-preview">Re: Inquiry about bulk discount for laptops</span>
+                </div>
+                <span class="msg-time">1 hr ago</span>
+            </li>
+            <li class="msg-item">
+                <div class="sender-avatar"></div>
+                <div class="msg-content">
+                    <span class="sender-name">Customer Support</span>
+                    <span class="msg-preview">Ticket #9988: Refund request processed.</span>
+                </div>
+                <span class="msg-time">Yesterday</span>
+            </li>
+            <li class="msg-item">
+                <div class="sender-avatar"></div>
+                <div class="msg-content">
+                    <span class="sender-name">Fashion Hub</span>
+                    <span class="msg-preview">New arrival alert! Check out our summer collection.</span>
+                </div>
+                <span class="msg-time">2 days ago</span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

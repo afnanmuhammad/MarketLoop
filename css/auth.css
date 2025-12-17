@@ -1,0 +1,245 @@
+/* Auth Pages Layout */
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.auth-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.auth-header .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-header .logo .icon {
+    background: #0d6efd;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.auth-header .logo .text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+/* Auth Container */
+.auth-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e3e8ee;
+}
+
+.auth-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1c1c1c;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #1c1c1c;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e3e8ee;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #0d6efd;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b96a5;
+    cursor: pointer;
+}
+
+/* Options Row */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #1c1c1c;
+}
+
+.forgot-link {
+    font-size: 14px;
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Auth Button */
+.auth-btn {
+    width: 100%;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+}
+
+.auth-btn:hover {
+    background: #0b5ed7;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    border-bottom: 1px solid #e3e8ee;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.divider span {
+    background: white;
+    padding: 0 10px;
+    color: #8b96a5;
+    font-size: 13px;
+}
+
+/* Social Buttons */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.social-btn {
+    background: white;
+    border: 1px solid #e3e8ee;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #505050;
+    transition: background 0.2s;
+}
+
+.social-btn:hover {
+    background: #f8f9fa;
+}
+
+.social-btn img {
+    height: 20px;
+}
+
+/* Footer in Card */
+.auth-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #505050;
+}
+
+.auth-footer a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Footer Bar */
+.auth-footer-bar {
+    background: white;
+    padding: 20px 0;
+    border-top: 1px solid #e3e8ee;
+    margin-top: auto;
+}
+
+.auth-footer-bar .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.auth-footer-bar .copyright {
+    color: #8b96a5;
+    font-size: 14px;
+}
+
+.auth-footer-bar .links {
+    display: flex;
+    gap: 20px;
+}
+
+.auth-footer-bar .links a {
+    color: #8b96a5;
+    text-decoration: none;
+    font-size: 14px;
+}
