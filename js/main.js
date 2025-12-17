@@ -86,7 +86,48 @@ const App = {
                 color: "Blue",
                 material: "Glass",
                 qty: 1
-            }
+            },
+            // {
+            //     id: 7,
+            //     title: "GoPro HERO6 4K Action Camera - Black",
+            //     price: 99.50,
+            //     oldPrice: 1128.00,
+            //     image: "../assets/Image/tech/image 29.png",
+            //     rating: 7.5,
+            //     stars: 4.5,
+            //     seller: "TechWorld",
+            //     size: "Compact",
+            //     color: "Black",
+            //     material: "Plastic",
+            //     qty: 1
+            // },
+            // {
+            //     id: 8,
+            //     title: "iPhone 12 Pro Max",
+            //     price: 99.50,
+            //     oldPrice: 1128.00,
+            //     image: "../assets/Image/tech/6.png",
+            //     rating: 5.9,
+            //     stars: 5,
+            //     seller: "Apple Store",
+            //     size: "Medium",
+            //     color: "Blue",
+            //     material: "Glass",
+            //     qty: 1
+            // },
+            // {
+            //     id: 9,
+            //     title: "Xiaomi Redmi 8 Original",
+            //     price: 99.50,
+            //     image: "../assets/Image/tech/8.png",
+            //     rating: 7.5,
+            //     stars: 4,
+            //     seller: "Mobile Hub",
+            //     size: "Standard",
+            //     color: "Blue",
+            //     material: "Glass/Plastic",
+            //     qty: 1
+            // }
         ]
     },
 
@@ -590,7 +631,7 @@ const App = {
         // Simple mock validation
         if (form.checkValidity()) {
             // Capture Customer Name
-            const nameInput = form.querySelector('input[placeholder="John Doe"]');
+            const nameInput = form.querySelector('input[placeholder="Enter your name"]');
             const customerName = nameInput ? nameInput.value : "Customer";
 
             // Calculate totals

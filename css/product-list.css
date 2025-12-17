@@ -133,7 +133,7 @@
   border-radius: 4px;
 }
 
-.custom-checkbox input:checked ~ .checkmark {
+.custom-checkbox input:checked~.checkmark {
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
@@ -144,7 +144,7 @@
   display: none;
 }
 
-.custom-checkbox input:checked ~ .checkmark:after {
+.custom-checkbox input:checked~.checkmark:after {
   display: block;
 }
 
@@ -170,7 +170,7 @@
   border-radius: 50%;
 }
 
-.custom-radio input:checked ~ .radio-mark {
+.custom-radio input:checked~.radio-mark {
   border-color: #0d6efd;
 }
 
@@ -180,7 +180,7 @@
   display: none;
 }
 
-.custom-radio input:checked ~ .radio-mark:after {
+.custom-radio input:checked~.radio-mark:after {
   display: block;
 }
 
@@ -352,6 +352,8 @@
 /* Product Card - New Design */
 .product-card {
   display: flex;
+  width: auto;
+  height: 300px;
   flex-direction: column;
   background: white;
   border: 1px solid #e0e0e0;
@@ -629,8 +631,11 @@
 }
 
 /* Adjust Price Block in List View */
-.product-list-container.list-view .price-block {
+/* Adjust Price Block in List View */
+.product-list-container.list-view .price-row {
   margin-bottom: 10px;
+  justify-content: flex-start;
+  gap: 500px;
 }
 
 .product-list-container.list-view .current-price {
@@ -685,12 +690,6 @@
 /* Show view details in List View */
 .product-list-container.list-view .view-details {
   display: inline-block;
-}
-
-/* Fix Price/Icon spacing in List View */
-.product-list-container.list-view .price-row {
-  justify-content: flex-start !important;
-  gap: 500px; /* Add significant space but keep them grouped left-ish or just separate them correctly */
 }
 
 /* Also ensure Rating/Shipping row is handled correctly in Grid vs List */
